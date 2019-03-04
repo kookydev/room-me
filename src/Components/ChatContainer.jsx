@@ -20,7 +20,7 @@ class ChatContainer extends React.Component {
         {
             avatarUrl:"https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg",
             authorName:"Rabbit",
-            message:"Appopriate rabbit noises.",
+            message:"*Appropriate rabbit noises*",
             key:103,
         }
       ]
