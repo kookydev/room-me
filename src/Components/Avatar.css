@@ -1,4 +1,7 @@
 .avatarImg {
-    width:3em;
-    height:3em;
+    width: 3em;
+    height: 3em;
+    border-radius: 15px;
+    float: left;
+    margin-top: 0em;
 }
