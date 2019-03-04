@@ -5,8 +5,8 @@ import './ChatRow.css';
 
 let ChatRow = (props) => {
     return (
-      <div className="chatRow" avatarUrl={props.avatarUrl} message={props.message}>
-        <Avatar avatarUrl={props.avatarUrl}/>
+      <div className="chatRow">
+        <Avatar avatarUrl={props.avatarUrl} authorName={props.authorName}/>
         <ChatBubble message={props.message}/>
       </div>
     );

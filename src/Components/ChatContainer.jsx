@@ -28,9 +28,9 @@ class ChatContainer extends React.Component {
     render() {
         return (
         <div className="chatContainer" messages={this.state.messages}>
-            <ChatRow avatarUrl={this.state.messages[0].avatarUrl} message={this.state.messages[0].message}/>
-            <ChatRow avatarUrl={this.state.messages[1].avatarUrl} message={this.state.messages[1].message}/>
-            <ChatRow avatarUrl={this.state.messages[2].avatarUrl} message={this.state.messages[2].message}/>
+            <ChatRow avatarUrl={this.state.messages[0].avatarUrl} authorName={this.state.messages[0].authorName} message={this.state.messages[0].message}/>
+            <ChatRow avatarUrl={this.state.messages[1].avatarUrl} authorName={this.state.messages[1].authorName} message={this.state.messages[1].message}/>
+            <ChatRow avatarUrl={this.state.messages[2].avatarUrl} authorName={this.state.messages[2].authorName} message={this.state.messages[2].message}/>
         </div>
         );
     }
