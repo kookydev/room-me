@@ -14,7 +14,7 @@ export class ChatBubble extends Component {
     render() {
     return (
       <div style={bubbleStyle} className="Bubble">
-        <p></p>
+        <p>{this.props.message}</p>
       </div>
     )
   }
