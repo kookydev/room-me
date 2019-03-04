@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import '../../App.css';
+import React from 'react';
 import './Avatar.css';
 
 let Avatar = (props) => {
     return (
       <div className="Avatar" avatarUrl={props.avatarUrl}>
-        <img src={this.avatarUrl} className="avatarImg"/>
+        <img src={props.avatarUrl} alt={props.authorName} className="avatarImg"/>
       </div>
     );
 }

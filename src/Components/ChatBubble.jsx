@@ -6,10 +6,10 @@ export class ChatBubble extends Component {
         text: ''
     }
 
-    onSubmit = (e) => {
-        e.preventDefault
-        this.setState({ text: ''})
-    }
+    // onSubmit = (e) => {
+    //     e.preventDefault;
+    //     this.setState({ text: ''})
+    // }
 
     render() {
     return (

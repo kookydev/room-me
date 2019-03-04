@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import "./Avatar";
-import "./ChatBubble";
-import '../../App.css';
+import React from 'react';
+import Avatar from "./Avatar.jsx";
+import ChatBubble from "./ChatBubble.jsx";
 import './ChatRow.css';
 
-let AvatarAndBubble = (props) => {
+let ChatRow = (props) => {
     return (
-      <div className="AvatarAndBubble" avatarUrl={props.avatarUrl} message={props.message}>
-        <Avatar avatarUrl={this.avatarUrl}/>
-        <ChatBubble message={this.message}/>
+      <div className="chatRow" avatarUrl={props.avatarUrl} message={props.message}>
+        <Avatar avatarUrl={props.avatarUrl}/>
+        <ChatBubble message={props.message}/>
       </div>
     );
 }
 
-export default AvatarAndBubble;
+export default ChatRow;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Components/ChatContainer.jsx";
+import ChatContainer from "./Components/ChatContainer.jsx";
 import './App.css';
 
 class App extends Component {
