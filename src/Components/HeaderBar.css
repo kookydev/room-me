@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: space-between;
     height: 3em;
-    background-color: #797A9E;
+    background-color: var(--main-bar-purple);
+    width: 100vh;
 }
 
 .room-name {
