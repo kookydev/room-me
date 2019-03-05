@@ -3,8 +3,8 @@ import './MessageInfo.css';
 
 let MessageInfo = (props) => {
     return (
-      <div className="MessageInfo">
-        <p><span className="AuthorName">{props.authorName}</span> <span className="MessageDate">{props.date}</span></p>
+      <div className="message-info">
+        <p><span className="author-name">{props.authorName}</span> <span className="message-date">{props.date}</span></p>
       </div>
     )
 }
