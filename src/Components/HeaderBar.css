@@ -1,5 +1,5 @@
 
-.topBar {
+.top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,13 +7,13 @@
     background-color: #797A9E;
 }
 
-.roomName {
+.room-name {
     font-size: 1em;
     font-weight: 400;
     color: white;
 }
 
-.iconsRight {
+.icons-right {
     display: flex;
     margin-right: 1em;
     align-items: center;
