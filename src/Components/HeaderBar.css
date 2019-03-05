@@ -1,7 +1,7 @@
 
 .top-bar {
-    position: fixed;
-    z-index: 1;
+    
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +10,8 @@
 }
 
 .top-bar-container {
+    position: fixed;
+    z-index: 1;
     background-color: var(--main-bar-purple);
     min-height: 3em;
     width: 100vw;
