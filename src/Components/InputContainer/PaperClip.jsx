@@ -15,4 +15,4 @@ const PaperClip = () =>  {
   )
 }
 
-export default PaperClip1
+export default PaperClip
