@@ -1,7 +1,12 @@
-.avatarImg {
+.avatar-img {
     width: 3em;
     height: 3em;
     border-radius: 15px;
     float: left;
-    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 1em;
+}
+
+.own-chat-row .avatar-img {
+    margin-right: 1em;
 }

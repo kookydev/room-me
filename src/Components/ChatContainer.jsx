@@ -8,7 +8,7 @@ class ChatContainer extends React.Component {
         {
             avatarUrl: "https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg",
             authorName:"Dog",
-            date:"2019 Mar 01",
+            date:"2019 Mar 01 19:40:20",
             message:"Woof!",
             key:101,
         },
@@ -38,7 +38,7 @@ class ChatContainer extends React.Component {
     render() {
     let msgs = this.state.messages;
         return (
-        <div className="chatContainer">
+        <div className="chat-container">
             <ChatRow avatarUrl={msgs[0].avatarUrl} authorName={msgs[0].authorName} date={msgs[0].date} message={msgs[0].message}/>
             <ChatRow avatarUrl={msgs[1].avatarUrl} authorName={msgs[1].authorName} date={msgs[1].date} message={msgs[1].message}/>
             <ChatRow avatarUrl={msgs[2].avatarUrl} authorName={msgs[2].authorName} date={msgs[2].date} message={msgs[2].message}/>

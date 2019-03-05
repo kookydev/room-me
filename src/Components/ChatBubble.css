@@ -1,18 +1,18 @@
-.Bubble {
+.chat-bubble {
     background-color: #D8DCFF;
     min-height:calc(3em - 10px);
     color: black;
     text-align: left;
     font-size: 16px;
     border-radius: 10px;
-    width: 313px;
+    width: 50vw;
     left: 10px;
     position: relative;
-    margin-top: 3em;
+    margin-top: 2em;
     padding:5px 1em;
 }
 
-.Bubble:after {
+.chat-bubble:after {
     bottom: 100%;
     left: 7%;
     border: solid transparent;
@@ -25,17 +25,8 @@
     margin-left: -10px;
 }
 
-.ownChatRow .Bubble {
+.own-chat-row .chat-bubble {
     background-color: #D9E7BA;
     color: black;
     text-align: right;
-}
-
-.ownChatRow .AvatarImg {
-    width: 3em;
-    height: 3em;
-    border-radius: 15px;
-    position: absolute; 
-    right: 0;
-    margin-top: 0em;
 }

@@ -1,8 +1,10 @@
-.MessageInfo {
+.message-info {
     color: #797A9E;
     text-align: left;
+    display:flex;
+    align-items: baseline;
 }
 
-.AuthorName {
+.author-name {
     color: #4A306D;
 }

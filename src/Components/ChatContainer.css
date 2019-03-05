@@ -5,28 +5,30 @@ body {
     padding: 0 20px;
 }
 
-.ChatContainer {
+.chat-container {
     width: 600px;
     background: #F2F5F8;
+    padding-top:1em;
+    padding-bottom:0.5em;
 }
 
-.ChatContainer-header {
+.chat-container-header {
     padding: 20px;
     border-bottom: 2px solid black;
 }
 
-.ChatContainer-about {
+.chat-container-about {
     float: left;
     padding-left: 10px;
     margin-top: 6px;
 }
 
-.ChatContainer-with {
+.chat-container-with {
     font-weight: bold;
     font-size: 16px;
 }
 
-.ChatContainer-history {
+.chat-container-history {
     padding: 30px 30px 20px;
     overflow-y: scroll;
 }
