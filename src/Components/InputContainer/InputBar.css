@@ -1,14 +1,67 @@
-.InputBar {
-    width: 100%;
-    height: 4em;
+
+
+.input-bar {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100vw;
+    height: 3em;
     background-color: #797A9E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 50px 50px;
 }
 
-.paperClip {
-    height: 20px;
-    width: 20px;
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    width: 100%;
+    height: 3em;
+}
+
+.message-bar {
+    width: 98%;
+    height: 2em;
+    border-radius: 15px;
+    font-size: 15px;
+    box-shadow: none;
+}
+
+.message-bar:focus {
+    outline: none;
+  }
+
+.grid-col1 {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #6c6d8e;
+    color: #ffffff;
+    border: 1px solid #797A9E; 
+}
+
+.submit-btn:active {
+    background-color: #60617e;
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+.paper-clip { 
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-column: 3;
+    height: 60%;
+    width: 80%;
     filter: invert(100%)
 }

@@ -1,9 +1,13 @@
-import React from 'react'
-import "./InputBar.css"
+import React from 'react';
+import './InputBar.css';
+
+// const showChatMenu = () => {
+
+// }
 
 const PaperClip = () =>  {
   return (
-    <svg className="paperClip"  id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    <svg className="paper-clip" onClick="showChatMenu" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width="792px" height="792px" viewBox="0 0 792 792">
 <g>
 	<path d="M306,150.48v459.36c0,0-6.696,96.408,91.476,96.408C486,706.248,486,609.84,486,609.84V126.72C486,126.72,486,0,360,0
