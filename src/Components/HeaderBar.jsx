@@ -10,13 +10,13 @@ import YellowBubble from './YellowBubble'
 export class HeaderBar extends Component {
   render() {
     return (
-      <div className="topBar">
-      <div className="logoGridBubble">
-      <Logo className="mainLogo" />
-      <YellowBubble className="notificationCount" />
+      <div className="top-bar">
+      <div className="logo-grid-bubble">
+      <Logo className="main-logo" />
+      <YellowBubble className="notification-count" />
       </div>
-      <h1 class="roomName">Room Name</h1>
-      <span className="iconsRight">
+      <h1 class="room-name">Room Name</h1>
+      <span className="icons-right">
       <SearchLogo />
       <HeadPhonesLogo />
       </span>
