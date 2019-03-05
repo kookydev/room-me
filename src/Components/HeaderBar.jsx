@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./HeaderBar.css";
-import Logo from "./Logo";
 import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "./LogoGrid";
-// import InputBar from './InputBar'
 
 export class HeaderBar extends Component {
   render() {
