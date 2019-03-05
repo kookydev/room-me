@@ -1,5 +1,5 @@
 .chat-bubble {
-    min-height:calc(3em - 10px);
+    min-height: calc(3em - 10px);
     color: black;
     font-size: 16px;
     border-radius: 10px;
@@ -27,7 +27,7 @@
     background-color: #D9E7BA;
     color: black;
     text-align: right;
-    float:right;
+    float: right;
 }
 
 .own-chat-row .chat-bubble:after {
@@ -48,9 +48,9 @@
 .not-own-chat-row .chat-bubble {
     background-color: #D8DCFF;
     color: black;
-    text-align:left;
-    float:left;
-    margin-right:1em;
+    text-align: left;
+    float: left;
+    margin-right: 1em;
 }
 
 .not-own-chat-row .chat-bubble:after {

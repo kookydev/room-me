@@ -1,12 +1,20 @@
 .top-bar {
-    position: fixed;
-    z-index: 1;
+
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 3em;
+    width: 100%;
+}
+
+.top-bar-container {
+    position: fixed;
+    z-index: 1;
     background-color: var(--main-bar-purple);
+    min-height: 3em;
     width: 100vw;
+
 }
 
 .top-bar h1 {
@@ -23,4 +31,8 @@
     display: flex;
     margin-right: 1em;
     align-items: center;
+}
+
+.notification-expand {
+    height: 100vh;
 }
