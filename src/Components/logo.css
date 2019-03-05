@@ -1,5 +1,5 @@
 
-.logoGridBubble {
+.logo-grid-bubble {
     display: grid;
     height: 100%;
     width: 50px;
@@ -10,11 +10,11 @@
     margin-left: 1em;
 }
 
-.mainLogo {
+.main-logo {
     height: 80%;
     grid-area: 1 / 1 / span 2 / span 3;
 }
 
-.notificationCount { 
+.notification-count { 
     grid-area: 1 / 3 / 2 / 5;
 }
