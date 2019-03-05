@@ -6,17 +6,17 @@
     font-size: 16px;
     border-radius: 10px;
     width: 50vw;
-    left: 10px;
+    margin-left: 1em;
     position: relative;
     margin-top: 2em;
-    padding:5px 1em;
+    padding: 5px 1em;
 }
 
 .chat-bubble:after {
     bottom: 100%;
     left: 7%;
     border: solid transparent;
-    content: " ";
+    content: '';
     height: 0;
     width: 0;
     position: absolute;
@@ -29,4 +29,6 @@
     background-color: #D9E7BA;
     color: black;
     text-align: right;
+    float:right;
+    margin-right:1em;
 }

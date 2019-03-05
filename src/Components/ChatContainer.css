@@ -1,34 +1,9 @@
-body {
-    display: flex;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
 .chat-container {
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background: #F2F5F8;
-    padding-top:1em;
-    padding-bottom:0.5em;
-}
-
-.chat-container-header {
-    padding: 20px;
-    border-bottom: 2px solid black;
-}
-
-.chat-container-about {
-    float: left;
-    padding-left: 10px;
-    margin-top: 6px;
-}
-
-.chat-container-with {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.chat-container-history {
-    padding: 30px 30px 20px;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
     overflow-y: scroll;
 }
