@@ -1,8 +1,9 @@
 .bubble {
 
-    background-color: #F1DB4B;
+    background-color: var(--notification-bubble);
     border-radius: 50%;
     width: 20px;
     height: 20px;
     font-size: 1em;
+   text-align: center;
 }

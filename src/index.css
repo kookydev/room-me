@@ -1,3 +1,9 @@
+:root {
+  --main-bar-purple: #797A9E;
+  --notification-bubble: #F1DB4B;
+}
+
+
 body {
   margin: 0;
   padding: 0;
