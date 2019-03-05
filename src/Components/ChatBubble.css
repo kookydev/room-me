@@ -50,7 +50,7 @@
 .not-own-chat-row .chat-bubble {
     background-color: #D8DCFF;
     color: black;
-    text-align: right;
+    text-align:left;
     float:left;
     margin-right:1em;
 }
