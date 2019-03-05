@@ -4,22 +4,39 @@ import  Logo from './logo'
 import HeadPhonesLogo from './headPhonesLogo'
 import SearchLogo from './searchLogo'
 import YellowBubble from './YellowBubble'
-// import InputBar from './InputBar'
+import Notifications from './Notifications'
 
 
 export class HeaderBar extends Component {
+  state = {
+    isActive: false
+  }
+
+
+ click = () => {
+  this.state.isActive ? this.setState({isActive:false}) : this.setState({isActive:true})
+}
+
+
+ 
   render() {
+  //   let className = 'top-bar';
+  // if (this.state.isActive) {
+  //   className += ' notification-expand';
+  // }
     return (
+      <div className={this.state.isActive ? "top-bar-container notification-expand" : "top-bar-container"}>
       <div className="top-bar">
-      <div className="logo-grid-bubble">
+      <a onClick={this.click} className="logo-grid-bubble">
       <Logo className="main-logo" />
-      <YellowBubble className="notification-count" />
-      </div>
-      <h1 class="room-name">Room Name</h1>
+      <YellowBubble  className="notification-count" />
+            </a>
+      <h1  class="room-name">Room Name</h1>
       <span className="icons-right">
       <SearchLogo />
       <HeadPhonesLogo />
       </span>
+      </div>
       </div>
     )
   }
