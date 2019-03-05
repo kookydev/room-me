@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.ChatContainer {
+    width: 600px;
+    background: #F2F5F8;
+}
+
+.ChatContainer-header {
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+
+.ChatContainer-about {
+    float: left;
+    padding-left: 10px;
+    margin-top: 6px;
+}
+
+.ChatContainer-with {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ChatContainer-history {
+    padding: 30px 30px 20px;
+    overflow-y: scroll;
+}
