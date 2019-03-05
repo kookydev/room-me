@@ -12,9 +12,9 @@ export default class YellowBubble extends Component {
 
   render() {
     return (
-      <div>
-        <p className={this.isVisibleHandler}>{this.props.notifications}</p>
-      </div>
+
+        <p className={this.isVisibleHandler()}>{this.props.notifications}</p>
+
     );
   }
 }

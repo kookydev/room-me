@@ -8,12 +8,14 @@ class LogoGrid extends Component {
   state = {};
   render() {
     return (
-      <div className="logo-grid-bubble">
-        <Logo className="main-logo" />
-        <YellowBubble className="notification-count" notifications={8} />
+      <div className="logo-grid">
+        <Logo />
+        <YellowBubble notifications={1} />
       </div>
     );
   }
 }
+
+
 
 export default LogoGrid;
