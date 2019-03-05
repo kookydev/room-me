@@ -4,7 +4,7 @@ class SubmitButton extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.state.message}></button>
+        <button></button>
       </div>
     )
   }
