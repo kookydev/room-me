@@ -3,8 +3,8 @@ import "./InputBar.css"
 
 const PaperClip = () =>  {
   return (
-    <svg className="paperClip" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	  viewBox="0 0 792 792">
+    <svg className="paperClip"  id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 width="792px" height="792px" viewBox="0 0 792 792">
 <g>
 	<path d="M306,150.48v459.36c0,0-6.696,96.408,91.476,96.408C486,706.248,486,609.84,486,609.84V126.72C486,126.72,486,0,360,0
 		S234,126.72,234,126.72v483.12c0,0,0,182.16,162,182.16s162-182.16,162-182.16V126.72c0-19.8-36-19.8-36,0v483.12
@@ -15,4 +15,4 @@ const PaperClip = () =>  {
   )
 }
 
-export default PaperClip
+export default PaperClip1
