@@ -1,0 +1,22 @@
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3em;
+    background-color: #797A9E;
+}
+
+.roomName {
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+}
+
+.iconsRight {
+    display: flex;
+    margin-right: 1em;
+    align-items: center;
+}
+
+
