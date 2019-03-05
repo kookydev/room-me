@@ -3,6 +3,7 @@
     text-align: left;
     display:flex;
     align-items: baseline;
+    margin-left: 1em;
 }
 
 .author-name {
