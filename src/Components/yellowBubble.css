@@ -1,9 +1,13 @@
-.bubble {
-
-    background-color: var(--notification-bubble);
+.yellow-bubble {
+    background-color: yellow;
     border-radius: 50%;
     width: 20px;
     height: 20px;
     font-size: 1em;
-   text-align: center;
+    text-align: center;
+    display: none
+}
+
+.visible {
+    display: block;
 }
