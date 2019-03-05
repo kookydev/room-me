@@ -15,6 +15,4 @@ class LogoGrid extends Component {
   }
 }
 
-
-
 export default LogoGrid;

@@ -1,4 +1,3 @@
-
 .logo-grid {
     display: grid;
     height: 3em;
@@ -15,6 +14,6 @@
     grid-area: 1 / 1 / span 2 / span 3;
 }
 
-.notification-count { 
+.notification-count {
     grid-area: 1 / 3 / 2 / 5;
 }
