@@ -38,56 +38,63 @@ class ChatContainer extends React.Component {
             authorName:"Cat",
             date:"2019 Mar 04 11:34:15",
             message:"Miaow miaow",
-            key:104,
+            key:105,
         },
         {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 04 11:34:24",
             message:"Miaow miaow miaow",
-            key:104,
+            key:106,
         },
         {
             avatarUrl:"https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg",
             authorName:"Dog",
             date:"2019 Mar 04 11:34:58",
             message:"Woof.",
-            key:104,
+            key:107,
+        },
+        {
+            avatarUrl:"https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg",
+            authorName:"Dog",
+            date:"2019 Mar 04 11:36:27",
+            message:"Woof woof. Woof woof. Woof woof woof woof, woof woof woof woof woof woof: woof woof woof woof woof woof woof. Woof woof woof woof woof woof woof woof woof woof (woof woof woof woof woof woof woof woof woof woof woof woof woof woof) woof woof woof woof woof; woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof! Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof.",
+            key:108,
         },
         {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 04 11:38:20",
-            message:"Miaow miaow",
-            key:104,
+            message:"Miaow miaow?",
+            key:109,
         },
         {
             avatarUrl:"https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg",
             authorName:"Rabbit",
             date:"2019 Mar 04 11:39:13",
             message:"*More rabbit noises*",
-            key:104,
+            key:110,
         },
         {
             avatarUrl:"https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg",
             authorName:"Rabbit",
             date:"2019 Mar 04 11:42:24",
             message:"*Even more rabbit noises*",
-            key:104,
+            key:111,
         },
         {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 04 11:42:08",
-            message:"Miaow miaow",
-            key:104,
+            message:"Miaow miaow...",
+            key:112,
         },
         {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 05 08:23:48",
             message:"Miaow miaow miaow miaow, miaow miaow miaow miaow miaow. Miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow, miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow.",
-            key:104,
+            key:113,
         }
       ]
     };
@@ -107,6 +114,7 @@ class ChatContainer extends React.Component {
             <ChatRow avatarUrl={msgs[9].avatarUrl} authorName={msgs[9].authorName} date={msgs[9].date} message={msgs[9].message}/>
             <ChatRow avatarUrl={msgs[10].avatarUrl} authorName={msgs[10].authorName} date={msgs[10].date} message={msgs[10].message}/>
             <ChatRow avatarUrl={msgs[11].avatarUrl} authorName={msgs[11].authorName} date={msgs[11].date} message={msgs[11].message}/>
+            <ChatRow avatarUrl={msgs[12].avatarUrl} authorName={msgs[12].authorName} date={msgs[12].date} message={msgs[12].message}/>
         </div>
         );
     }
