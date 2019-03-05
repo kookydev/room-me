@@ -65,7 +65,7 @@ class ChatContainer extends React.Component {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 04 11:38:20",
-            message:"Miaow miaow",
+            message:"Miaow miaow?",
             key:109,
         },
         {
@@ -86,7 +86,7 @@ class ChatContainer extends React.Component {
             avatarUrl:"https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
             authorName:"Cat",
             date:"2019 Mar 04 11:42:08",
-            message:"Miaow miaow",
+            message:"Miaow miaow...",
             key:112,
         },
         {
