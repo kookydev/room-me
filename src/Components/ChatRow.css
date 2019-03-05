@@ -1,3 +1,7 @@
+.chat-row {
+    margin-top:1em;
+}
+
 .avatar-and-message-info {
     display:flex;
 }
