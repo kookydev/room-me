@@ -4,7 +4,6 @@
     font-size: 16px;
     border-radius: 10px;
     width: 50vw;
-    margin-left: 1em;
     position: relative;
     margin-top: 1.5em;
     padding: 5px 1em;
@@ -29,7 +28,6 @@
     color: black;
     text-align: right;
     float:right;
-    margin-right:1em;
 }
 
 .own-chat-row .chat-bubble:after {
