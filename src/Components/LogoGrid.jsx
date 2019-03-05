@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Logo from "./Logo";
-import YellowBubble from "./YellowBubble";
+import NotificationBubble from "./NotificationBubble";
 import "./logo.css";
-import "./yellowBubble.css";
 
 class LogoGrid extends Component {
   state = {};
@@ -10,7 +9,7 @@ class LogoGrid extends Component {
     return (
       <div className="logo-grid">
         <Logo />
-        <YellowBubble notifications={1} />
+        <NotificationBubble notifications={10} />
       </div>
     );
   }
