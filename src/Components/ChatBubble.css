@@ -1,28 +1,26 @@
 .chat-bubble {
-    background-color: #D8DCFF;
     min-height:calc(3em - 10px);
     color: black;
-    text-align: left;
     font-size: 16px;
     border-radius: 10px;
     width: 50vw;
-    margin-left: 1em;
     position: relative;
-    margin-top: 2em;
+    margin-top: 0.75em;
     padding: 5px 1em;
 }
 
 .chat-bubble:after {
-    bottom: 100%;
-    left: 7%;
-    border: solid transparent;
     content: '';
-    height: 0;
-    width: 0;
     position: absolute;
-    pointer-events: none;
-    border-width: 10px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #D8DCFF;
+    border-top: 0;
+    border-right: 0;
     margin-left: -10px;
+    margin-top: -20px;
 }
 
 .own-chat-row .chat-bubble {
@@ -30,5 +28,42 @@
     color: black;
     text-align: right;
     float:right;
+}
+
+.own-chat-row .chat-bubble:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 2em;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #D9E7BA;
+    border-top: 0;
+    border-left: 0;
+    margin-right: -17px;
+    margin-top: -10px;
+}
+
+.not-own-chat-row .chat-bubble {
+    background-color: #D8DCFF;
+    color: black;
+    text-align:left;
+    float:left;
     margin-right:1em;
+}
+
+.not-own-chat-row .chat-bubble:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #D8DCFF;
+    border-top: 0;
+    border-right: 0;
+    margin-left: -17px;
+    margin-top: -10px;
 }
