@@ -6,7 +6,7 @@ import './ChatRow.css';
 
 let ChatRow = (props) => {
     return (
-      <div className={props.authorName==="Cat" ? "chat-row own-chat-row" : "chat-row"}>
+      <div className={props.authorName==="Cat" ? "chat-row own-chat-row" : "chat-row not-own-chat-row"}>
         <div className="avatar-and-message-info">
           <Avatar avatarUrl={props.avatarUrl} authorName={props.authorName}/>
           <MessageInfo authorName={props.authorName} date={props.date}/>
