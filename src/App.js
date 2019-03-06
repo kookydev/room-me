@@ -187,7 +187,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HeaderBar roomName={this.state.rooms[this.state.currentRoom-101].name} avatarUrl={this.state.users[this.state.currentUser-201].avatarUrl}/>
+        <HeaderBar roomName={this.state.rooms[this.state.currentRoom-101].name} userName={this.state.users[this.state.currentUser-201].name} avatarUrl={this.state.users[this.state.currentUser-201].avatarUrl}/>
         <ChatContainer msgs={this.state.messages.filter(msg=>msg.room===this.state.currentRoom)} users={this.state.users} currentUserName={this.state.currentUserName}/>
         <InputBar />
       </div>
