@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Input from './input';
 import PaperClip from './PaperClip';
 import SubmitButton from './SubmitButton';
 import './InputBar.css'
 
 
-class InputBar extends Component {
-  render() {
+let InputBar = (props) => {
     return (
       <div className="input-bar">
         <Input />
@@ -14,8 +13,6 @@ class InputBar extends Component {
         <PaperClip />
       </div>
     )
-  }
 }
 
 export default InputBar
-

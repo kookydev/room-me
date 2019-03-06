@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-
-class Input extends Component {
-    render() {
+let Input = (props) => {
     return ( 
       <div className="message-container"> 
         <input className="message-bar" type="text" />
       </div>
     )
-  }
 }
 
 export default Input

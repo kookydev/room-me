@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "./searchLogo.css";
 
-export default class SearchLogo extends Component {
-  render() {
+let SearchLogo = (props) => {
     return (
       <svg
         className="search-logo"
@@ -32,5 +31,6 @@ export default class SearchLogo extends Component {
         />
       </svg>
     );
-  }
 }
+
+export default SearchLogo
