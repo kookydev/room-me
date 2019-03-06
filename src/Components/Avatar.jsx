@@ -3,10 +3,10 @@ import './Avatar.css';
 
 let Avatar = (props) => {
     return (
-      <div className="avatar" avatarUrl={props.avatarUrl}>
+      <div className="avatar">
         <img src={props.avatarUrl} alt={props.authorName} className="avatar-img"/>
       </div>
     );
 }
 
-export default Avatar;
+export default Avatar; 

@@ -1,30 +1,47 @@
-import React, { Component } from 'react';
-import './HeaderBar.css'
-import  Logo from './logo'
-import HeadPhonesLogo from './headPhonesLogo'
-import SearchLogo from './searchLogo'
-import YellowBubble from './YellowBubble'
-// import InputBar from './InputBar'
-
+import React, { Component } from "react";
+import "./HeaderBar.css";
+import HeadPhonesLogo from "./HeadPhonesLogo";
+import SearchLogo from "./searchLogo";
+import LogoGrid from "./LogoGrid";
 
 export class HeaderBar extends Component {
+  state = {
+    isActive: false
+  };
+
+  click = () => {
+    this.state.isActive
+      ? this.setState({ isActive: false })
+      : this.setState({ isActive: true });
+  };
+
   render() {
+    //   let className = 'top-bar';
+    // if (this.state.isActive) {
+    //   className += ' notification-expand';
+    // }
     return (
-      <div className="top-bar">
-      <div className="logo-grid-bubble">
-      <Logo className="main-logo" />
-      <YellowBubble className="notification-count" />
+      <div
+        className={
+          this.state.isActive
+            ? "top-bar-container notification-expand"
+            : "top-bar-container"
+        }
+      >
+        <div className="top-bar">
+          <button className="button-null" onClick={this.click}><LogoGrid /></button> 
+          <h1 className="room-name">Room Name</h1>
+          <span className="icons-right">
+            <SearchLogo />
+            <HeadPhonesLogo />
+            
+          </span>
+          
+
+        </div>
       </div>
-      <h1 class="room-name">Room Name</h1>
-      <span className="icons-right">
-      <SearchLogo />
-      <HeadPhonesLogo />
-      </span>
-      </div>
-    )
+    );
   }
 }
-
-
 
 export default HeaderBar;

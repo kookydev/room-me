@@ -1,0 +1,17 @@
+.notification-bubble {
+    background-color: yellow;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 1em;
+    text-align: center;
+    display: none;
+    grid-area: 1 / 3 / 2 / 5;
+    
+}
+
+.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

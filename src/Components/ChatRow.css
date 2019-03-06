@@ -3,9 +3,9 @@
 }
 
 .avatar-and-message-info {
-    display:flex;
+    display: flex;
 }
 
 .own-chat-row .avatar-and-message-info {
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }

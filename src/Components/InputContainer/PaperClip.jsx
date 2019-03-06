@@ -3,11 +3,7 @@ import './InputBar.css';
 
 
 
-const PaperClip = () =>  {
-	// state = {
-		
-	// }
-
+let PaperClip = () =>  {
   return (
     <svg className="paper-clip" onClick="showChatMenu" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 width="792px" height="792px" viewBox="-175 -175 792 792">
