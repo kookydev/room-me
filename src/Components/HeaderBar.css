@@ -10,11 +10,11 @@
 
 .top-bar-container {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     background-color: var(--main-bar-purple);
-    min-height: 3em;
+    height: 3em;
     width: 100vw;
-
+    transition: height .5s ease-in-out;
 }
 
 .top-bar h1 {
@@ -36,3 +36,11 @@
 .notification-expand {
     height: 100vh;
 }
+
+.button-null {
+    background: none;
+    border: none;
+    outline: none;
+    height: 3em;
+}
+  
