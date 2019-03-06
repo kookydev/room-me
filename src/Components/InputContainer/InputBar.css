@@ -23,12 +23,17 @@
 .message-bar {
     width: 98%;
     height: 2em;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 15px;
-    box-shadow: none;
+    background: #ffffff;
+    font-weight: 500;
+    padding-left: 5px;
 }
 
 .message-bar:focus {
+    -webkit-box-shadow:inset 0 0 10px #000;
+       -moz-box-shadow:inset 0 0 10px #000;
+            box-shadow:inset 0 0 10px #000;
     outline: none;
   }
 
@@ -61,7 +66,12 @@
     justify-self: center;
     align-self: center;
     grid-column: 3;
-    height: 60%;
-    width: 80%;
-    filter: invert(100%)
+    height: 100%;
+    width: 100%;
+    filter: invert(100%);
+    margin: 0 auto;
+}
+
+.paper-clip:hover {
+    filter: invert(0%);
 }
