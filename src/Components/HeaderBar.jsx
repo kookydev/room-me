@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./HeaderBar.css";
-import HeadPhonesLogo from "./headPhonesLogo";
+import HeadPhonesLogo from "./HeadPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "./LogoGrid";
 import Notifications from './Notifications'

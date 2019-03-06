@@ -3,9 +3,7 @@ import LogoGrid from './LogoGrid'
 import Avatar from './Avatar'
 import './notification.css'
 
-
-export default class Notifications extends Component {
-  render() {
+let Notifications = (props) => {
     return (
       <div className="notification-bar">
       <LogoGrid />
@@ -13,7 +11,6 @@ export default class Notifications extends Component {
       <Avatar />
       </div>
     )
-  }
 }
 
 
