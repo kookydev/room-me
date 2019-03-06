@@ -3,8 +3,7 @@ import YellowBubble from './NotificationBubble'
 import Avatar from './Avatar.jsx'
 import './notification.css'
 
-export default class Notifications extends Component {
-  render() {
+let Notifications = (props) => {
     return (
       <div class="notification-bar">
       <YellowBubble />
@@ -12,5 +11,4 @@ export default class Notifications extends Component {
       <Avatar />
       </div>
     )
-  }
 }
