@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import './ChatBubble.css';
 
-export class ChatBubble extends Component {
-    render() {
+let ChatBubble = (props) => {
     return (
       <div className="chat-bubble">
         <p>{this.props.message}</p>
       </div>
     )
-  }
 }
 
 export default ChatBubble
