@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100vw;
     background: #F2F5F8;
-    padding-top: 2.5em;
-    padding-bottom: 4.5em;
+    padding-top: 3em;
+    padding-bottom: 4em;
     overflow-y: scroll;
 }
