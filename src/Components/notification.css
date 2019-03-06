@@ -1,3 +1,4 @@
 .notification-bar {
-    
+    display: flex;
+    align-items: center;
 }
