@@ -8,7 +8,7 @@ import ChatContainer from "./Components/ChatContainer";
 
 class App extends Component {
   state = {
-    currentRoomName: "Living-room",
+    currentRoom: 101,
     currentUserName: "Cat",
     rooms: [
       {
@@ -19,10 +19,10 @@ class App extends Component {
       {
         key:102,
         name:"Kitchen",
-        users:[201,202,204]
+        users:[204,202]
       },
       {
-        key:203,
+        key:103,
         name:"Conservatory",
         users:[]
       }
@@ -58,88 +58,136 @@ class App extends Component {
       {
           date:"2019 Mar 01, 7:40pm",
           message:"Woof!",
+          room:101,
           author:201,
           key:301,
       },
       {
           date:"2019 Mar 01, 7:45pm",
           message:"Miaow, miaow, miaow!",
+          room:101,
           author:202,
           key:302,
       },
       {
           date:"2019 Mar 04, 11:20am",
           message:"*Appropriate rabbit noises*",
+          room:101,
           author:203,
           key:303,
       },
       {
           date:"2019 Mar 04, 11:33am",
           message:"Miaow miaow",
+          room:101,
           author:202,
           key:304,
       },
       {
           date:"2019 Mar 04, 11:34am",
           message:"Miaow miaow",
+          room:101,
           author:202,
           key:305,
       },
       {
           date:"2019 Mar 04, 11:34am",
           message:"Miaow miaow miaow",
+          room:101,
           author:202,
           key:306,
       },
       {
           date:"2019 Mar 04, 11:35am",
           message:"Woof.",
+          room:101,
           author:201,
           key:307,
       },
       {
           date:"2019 Mar 04, 11:36am",
           message:"Woof woof. Woof woof. Woof woof woof woof, woof woof woof woof woof woof: woof woof woof woof woof woof woof. Woof woof woof woof woof woof woof woof woof woof (woof woof woof woof woof woof woof woof woof woof woof woof woof woof) woof woof woof woof woof; woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof! Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof.",
+          room:101,
           author:201,
           key:308,
       },
       {
           date:"2019 Mar 04, 11:38am",
           message:"Miaow miaow?",
+          room:101,
           author:202,
           key:309,
       },
       {
           date:"2019 Mar 04, 11:39am",
           message:"*More rabbit noises*",
+          room:101,
           author:203,
           key:310,
       },
       {
           date:"2019 Mar 04, 11:42am",
           message:"*Even more rabbit noises*",
+          room:101,
           author:203,
           key:311,
       },
       {
           date:"2019 Mar 04, 11:42am",
           message:"Miaow miaow...",
+          room:101,
           author:202,
           key:312,
       },
       {
           date:"2019 Mar 05, 8:23am",
           message:"Miaow miaow miaow miaow, miaow miaow miaow miaow miaow. Miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow, miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow.",
+          room:101,
           author:202,
           key:313,
+      },
+      {
+          date:"2019 Mar 06, 11:42am",
+          message:"Squawk squawk squawk!",
+          room:102,
+          author:204,
+          key:314,
+      },
+      {
+          date:"2019 Mar 06, 11:44am",
+          message:"Squawk squawk squawk squawk squawk squawk squawk.",
+          room:102,
+          author:204,
+          key:315,
+      },
+      {
+          date:"2019 Mar 06, 11:49am",
+          message:"Miaow?",
+          room:102,
+          author:202,
+          key:316,
+      },
+      {
+          date:"2019 Mar 06, 11:51am",
+          message:"Squawk squawk squawk squawk!",
+          room:102,
+          author:204,
+          key:317,
+      },
+      {
+          date:"2019 Mar 06, 12:02pm",
+          message:"Miaow miaow miaow miaow miaow miaow miaow miaow! Miaow. Miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow &mdash; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow. Miaow miaow.",
+          room:101,
+          author:202,
+          key:318,
       }
     ]
   };
   render() {
     return (
       <div className="App">
-        <HeaderBar roomName={this.state.currentRoomName}/>
-        <ChatContainer msgs={this.state.messages} users={this.state.users} currentUserName={this.state.currentUserName}/>
+        <HeaderBar roomName={this.state.rooms[this.state.currentRoom-101].name}/>
+        <ChatContainer msgs={this.state.messages.filter(msg=>msg.room===this.state.currentRoom)} users={this.state.users} currentUserName={this.state.currentUserName}/>
         <InputBar />
       </div>
     );

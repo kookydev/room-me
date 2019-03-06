@@ -70,3 +70,11 @@
     filter: invert(100%);
     cursor: pointer;
 }
+
+.paper-clip:hover {
+    text-shadow: #AAA 0px 0px 4px;
+}
+
+.paper-clip::after {
+    content: "F00D";
+}
