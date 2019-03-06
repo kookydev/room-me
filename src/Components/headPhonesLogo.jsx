@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './headPhonesLogo.css'
+import './HeadPhonesLogo.css'
 
 export default class headPhonesLogo extends Component {
   render() {
