@@ -1,7 +1,7 @@
 import React from "react";
 import "./Logo.css";
 
-const Logo = () => {
+let Logo = () => {
   return (
     <svg
       className="main-logo"
