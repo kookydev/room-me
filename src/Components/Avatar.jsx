@@ -9,4 +9,4 @@ let Avatar = (props) => {
     );
 }
 
-export default Avatar;
+export default Avatar; 
