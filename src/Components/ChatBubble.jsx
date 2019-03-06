@@ -4,7 +4,7 @@ import './ChatBubble.css';
 let ChatBubble = (props) => {
     return (
       <div className="chat-bubble">
-        <p>{this.props.message}</p>
+        <p>{props.message}</p>
       </div>
     )
 }

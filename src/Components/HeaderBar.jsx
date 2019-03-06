@@ -30,7 +30,7 @@ export class HeaderBar extends Component {
       >
         <div className="top-bar">
           <button className="button-null" onClick={this.click}><LogoGrid /></button> 
-          <h1 class="room-name">Room Name</h1>
+          <h1 className="room-name">Room Name</h1>
           <span className="icons-right">
             <SearchLogo />
             <HeadPhonesLogo />
