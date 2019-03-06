@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./HeaderBar.css";
-import HeadPhonesLogo from "./HeadPhonesLogo";
+import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "./LogoGrid";
 
@@ -29,15 +29,14 @@ export class HeaderBar extends Component {
         }
       >
         <div className="top-bar">
-          <button className="button-null" onClick={this.click}><LogoGrid /></button> 
+          <button className="button-null" onClick={this.click}>
+            <LogoGrid />
+          </button>
           <h1 className="room-name">Room Name</h1>
           <span className="icons-right">
             <SearchLogo />
             <HeadPhonesLogo />
-            
           </span>
-          
-
         </div>
       </div>
     );
