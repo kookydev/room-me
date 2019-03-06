@@ -36,3 +36,11 @@
 .notification-expand {
     height: 100vh;
 }
+
+.button-null {
+    background: none;
+    border: none;
+    outline: none;
+    height: 3em;
+}
+  
