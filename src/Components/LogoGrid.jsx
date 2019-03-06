@@ -9,7 +9,7 @@ class LogoGrid extends Component {
     return (
       <div className="logo-grid">
         <Logo />
-        <NotificationBubble notifications={10} />
+        <NotificationBubble notifications={6} />
       </div>
     );
   }
