@@ -1,80 +1,80 @@
 .input-bar {
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  width: 100vw;
-  height: 3em;
-  background-color: #797a9e;
-  display: grid;
-  grid-template-columns: 1fr 50px 50px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100vw;
+    height: 3em;
+    background-color: #797A9E;
+    display: grid;
+    grid-template-columns: 1fr 50px 50px;
 }
 
 .message-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 1;
-  width: 100%;
-  height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    width: 100%;
+    height: 3em;
 }
 
 .message-bar {
-  width: 98%;
-  height: 2em;
-  border-radius: 15px;
-  font-size: 15px;
-  box-shadow: none;
-  padding-left: 10px;
+    width: 98%;
+    height: 2em;
+    border-radius: 15px;
+    font-size: 15px;
+    box-shadow: none;
+    padding-left: 10px;
 }
 
 .message-bar:focus {
-  outline: none;
-}
+    outline: none;
+  }
 
 .grid-col1 {
-  grid-column: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .submit-btn {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: #6c6d8e;
-  color: #ffffff;
-  border: 1px solid #797a9e;
-  cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #6c6d8e;
+    color: #ffffff;
+    border: 1px solid #797A9E;
+    cursor: pointer;  
 }
 
 .submit-btn:hover {
-  background-color: rgb(149, 150, 177);
+    background-color: rgb(149, 150, 177);
 }
 
 .submit-btn:active {
-  background-color: rgb(149, 150, 177);
+    background-color: rgb(149, 150, 177);
 }
 
 .submit-btn:focus {
-  outline: none;
+    outline: none;
 }
 
-.paper-clip {
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  grid-column: 3;
-  height: 60%;
-  width: 80%;
-  filter: invert(100%);
-  cursor: pointer;
+.paper-clip { 
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-column: 3;
+    height: 60%;
+    width: 80%;
+    filter: invert(100%);
+    cursor: pointer;
 }
 
 .paper-clip:hover {
-  text-shadow: #aaa 0px 0px 4px;
+    text-shadow: #AAA 0px 0px 4px;
 }
 
 .paper-clip::after {
-  content: "F00D";
+    content: "F00D";
 }
