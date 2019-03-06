@@ -13,4 +13,6 @@ let Notifications = (props) => {
     )
 }
 
+export default Notifications
+
 
