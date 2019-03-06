@@ -1,5 +1,3 @@
-
-
 .input-bar {
     position: fixed;
     z-index: 1;
@@ -26,6 +24,7 @@
     border-radius: 15px;
     font-size: 15px;
     box-shadow: none;
+    padding-left: 10px;
 }
 
 .message-bar:focus {
@@ -45,11 +44,16 @@
     height: 100%;
     background-color: #6c6d8e;
     color: #ffffff;
-    border: 1px solid #797A9E; 
+    border: 1px solid #797A9E;
+    cursor: pointer;  
+}
+
+.submit-btn:hover {
+    background-color: rgb(149, 150, 177);
 }
 
 .submit-btn:active {
-    background-color: #60617e;
+    background-color: rgb(149, 150, 177);
 }
 
 .submit-btn:focus {
@@ -63,5 +67,6 @@
     grid-column: 3;
     height: 60%;
     width: 80%;
-    filter: invert(100%)
+    filter: invert(100%);
+    cursor: pointer;
 }
