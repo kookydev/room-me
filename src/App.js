@@ -226,7 +226,7 @@ class App extends Component {
         this.state.users[this.state.currentUser - 201].name
       }
       /> 
-      <InputBar inputHandler={this.inputHandler} sendMessage={()=>this.sendMessage("This is a test message.")}/>
+      <InputBar inputHandler={this.inputHandler} inputValue={this.state.inputValue} sendMessage={this.sendMessage}/>
       </div>
     );
   }
