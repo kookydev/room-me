@@ -7,7 +7,7 @@ import "./InputBar.css";
 let InputBar = props => {
   return (
     <div className="input-bar">
-      <Input />
+      <Input inputHandler={props.inputHandler}/>
       <SubmitButton sendMessage={props.sendMessage}/>
       <PlusButton />
     </div>
