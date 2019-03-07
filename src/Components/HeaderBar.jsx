@@ -3,6 +3,7 @@ import "./HeaderBar.css";
 import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "./LogoGrid";
+import Notifications from './Notifications'
 
 export class HeaderBar extends Component {
   state = {
@@ -16,18 +17,12 @@ export class HeaderBar extends Component {
   };
 
   render() {
-    //   let className = 'top-bar';
-    // if (this.state.isActive) {
-    //   className += ' notification-expand';
-    // }
     return (
       <div
         className={
           this.state.isActive
             ? "top-bar-container notification-expand"
-            : "top-bar-container"
-        }
-      >
+            : "top-bar-container"}>
         <div className="top-bar">
           <button className="button-null" onClick={this.click}>
             <LogoGrid />
@@ -38,6 +33,12 @@ export class HeaderBar extends Component {
             <HeadPhonesLogo />
           </span>
         </div>
+        <div className={
+          this.state.isActive
+            ? "top-bar-notification expand"
+            : "top-bar-notification"}>
+         <Notifications />
+         </div>
       </div>
     );
   }

@@ -1,6 +1,4 @@
 .top-bar {
-
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +13,7 @@
     height: 3em;
     width: 100vw;
     transition: height .5s ease-in-out;
+    
 }
 
 .top-bar h1 {
@@ -34,7 +33,10 @@
 }
 
 .notification-expand {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    
 }
 
 .button-null {
@@ -43,4 +45,24 @@
     outline: none;
     height: 3em;
 }
-  
+.top-bar-notification {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    transition-delay: 400ms;
+    background-color: rgba(255, 255, 255, 0.300);
+    z-index: 10;
+    height: 4em;
+    width: 100%;
+    justify-content: space-between;
+    
+    
+}
+
+.expand {
+    visibility: visible;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;  
+}
