@@ -192,10 +192,10 @@ class App extends Component {
     let date = new Date();
     let currentRoom = this.state.currentRoom;
     let time;
-    if (date.getHours()==0) {
+    if (date.getHours()===0) {
       time = "OO:"+date.getMinutes()+"am"
     }
-    else if (date.getHours()==12) {
+    else if (date.getHours()===12) {
       time = "12:"+date.getMinutes()+"pm"
     }
     else if (date.getHours()>12) {
@@ -218,7 +218,7 @@ class App extends Component {
   messageInput = document.getElementsByClassName("message-bar")[0];
   render() {
     return ( 
-      <div className = "App" >
+      <div className = "App">
       <HeaderBar roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
       }
