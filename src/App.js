@@ -192,17 +192,24 @@ class App extends Component {
     let date = new Date();
     let currentRoom = this.state.currentRoom;
     let time;
-    if (date.getHours()===0) {
-      time = "OO:"+date.getMinutes()+"am"
-    }
-    else if (date.getHours()===12) {
-      time = "12:"+date.getMinutes()+"pm"
-    }
-    else if (date.getHours()>12) {
-      time = `${date.getHours()-12}:${date.getMinutes()}pm`
+    let minutes;
+    if (date.getMinutes()<10) {
+      minutes = `0${date.getMinutes()}`;
     }
     else {
-      time = `${date.getHours()}:${date.getMinutes()}am`
+      minutes = `${date.getMinutes()}`;
+  }
+    if (date.getHours()===0) {
+      time = "OO:"+minutes+"am"
+    }
+    else if (date.getHours()===12) {
+      time = "12:"+minutes+"pm"
+    }
+    else if (date.getHours()>12) {
+      time = `${date.getHours()-12}:${minutes}pm`
+    }
+    else {
+      time = `${date.getHours()}:${minutes}am`
     };
     let newMessage = {
       "date": `${date.getFullYear()} ${date.toLocaleString("en-us",{month:"short"})} ${date.getDate()<10 ? "0" : ""}${date.getDate()}, ${time}`,
