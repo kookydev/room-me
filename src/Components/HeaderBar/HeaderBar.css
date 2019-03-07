@@ -4,6 +4,7 @@
     justify-content: space-between;
     height: 3em;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .top-bar-container {
@@ -13,11 +14,12 @@
     height: 3em;
     width: 100vw;
     transition: height .5s ease-in-out;
-    
+    box-sizing: border-box;
 }
 
 .top-bar h1 {
     font-size: 1.8em;
+
 }
 
 .room-name {
@@ -36,7 +38,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    
+
 }
 
 .button-null {
@@ -45,6 +47,7 @@
     outline: none;
     height: 3em;
 }
+
 .top-bar-notification {
     display: flex;
     visibility: hidden;
@@ -56,13 +59,14 @@
     height: 4em;
     width: 100%;
     justify-content: space-between;
-    
-    
+    box-sizing: border-box;
+
+
 }
 
 .expand {
     visibility: visible;
     opacity: 1;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }

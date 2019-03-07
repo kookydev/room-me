@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./PlusButton.css";
+import "./InputBar.css";
 
 class PlusButton extends Component {
   state = { active: false };
@@ -10,7 +11,7 @@ class PlusButton extends Component {
   };
   render() {
     return (
-      <div onClick={this.click} class="arrow-button-container">
+      <div onClick={this.click} className="arrow-button-container">
         <div className={this.state.active ? "arrow1 arrow1-open" : "arrow1"} />
         <div className={this.state.active ? "arrow2 arrow2-open" : "arrow2"} />
       </div>
