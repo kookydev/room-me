@@ -55,6 +55,7 @@
     z-index: 10;
     height: 4em;
     width: 100%;
+    justify-content: space-between;
     
     
 }
