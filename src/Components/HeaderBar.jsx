@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./HeaderBar.css";
-import HeadPhonesLogo from "./HeadPhonesLogo";
+import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "./LogoGrid";
 import Notifications from './Notifications'
@@ -24,7 +24,9 @@ export class HeaderBar extends Component {
             ? "top-bar-container notification-expand"
             : "top-bar-container"}>
         <div className="top-bar">
-          <button className="button-null" onClick={this.click}><LogoGrid /></button> 
+          <button className="button-null" onClick={this.click}>
+            <LogoGrid />
+          </button>
           <h1 className="room-name">Room Name</h1>
           <span className="icons-right">
             <SearchLogo />
