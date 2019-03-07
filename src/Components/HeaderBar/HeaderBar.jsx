@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import "./HeaderBar.css";
 import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
-<<<<<<< HEAD:src/Components/HeaderBar/HeaderBar.jsx
 import LogoGrid from "../LogoGrid";
-=======
-import LogoGrid from "./LogoGrid";
-import Notifications from './Notifications'
->>>>>>> 9bd898a64e8c5f973d9fe111b62b83c6c976904a:src/Components/HeaderBar.jsx
+import Notifications from '../Notifications'
 
 export class HeaderBar extends Component {
   state = {
