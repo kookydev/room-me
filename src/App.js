@@ -191,8 +191,28 @@ class App extends Component {
   sendMessage(input) {
     let date = new Date();
     let currentRoom = this.state.currentRoom;
+    let time;
+    let minutes;
+    if (date.getMinutes()<10) {
+      minutes = `0${date.getMinutes()}`;
+    }
+    else {
+      minutes = `${date.getMinutes()}`;
+  }
+    if (date.getHours()===0) {
+      time = "OO:"+minutes+"am"
+    }
+    else if (date.getHours()===12) {
+      time = "12:"+minutes+"pm"
+    }
+    else if (date.getHours()>12) {
+      time = `${date.getHours()-12}:${minutes}pm`
+    }
+    else {
+      time = `${date.getHours()}:${minutes}am`
+    };
     let newMessage = {
-      "date": `${date}`,
+      "date": `${date.getFullYear()} ${date.toLocaleString("en-us",{month:"short"})} ${date.getDate()<10 ? "0" : ""}${date.getDate()}, ${time}`,
       "message": this.state.inputValue,
       "room": currentRoom,
       "author": this.state.currentUser,
@@ -205,7 +225,7 @@ class App extends Component {
   messageInput = document.getElementsByClassName("message-bar")[0];
   render() {
     return ( 
-      <div className = "App" >
+      <div className = "App">
       <HeaderBar roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
       }
@@ -226,7 +246,7 @@ class App extends Component {
         this.state.users[this.state.currentUser - 201].name
       }
       /> 
-      <InputBar inputHandler={this.inputHandler} sendMessage={()=>this.sendMessage("This is a test message.")}/>
+      <InputBar inputHandler={this.inputHandler} inputValue={this.state.inputValue} sendMessage={this.sendMessage}/>
       </div>
     );
   }
