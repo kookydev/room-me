@@ -181,20 +181,22 @@ class App extends Component {
   };
   sendMessage(input) {
     let date = new Date();
+    let currentRoom = this.state.currentRoom;
     let newMessage = {
       "date": `${date}`,
       "message": input,
-      "room": this.state.currentRoom,
+      "room": currentRoom,
       "author": this.state.currentUser,
       "key": this.state.messages.length+301
     }
     let newMessageArray = [...this.state.messages,newMessage];
     this.setState({messages: newMessageArray})
   };
+  messageInput = document.getElementsByClassName("message-bar")[0];
   render() {
     return ( 
       <div className = "App" >
-      {/* <HeaderBar roomName = {
+      <HeaderBar roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
       }
       userName = {
@@ -203,8 +205,7 @@ class App extends Component {
       avatarUrl = {
         this.state.users[this.state.currentUser - 201].avatarUrl
       }
-      /> */}
-      <button onClick={()=>this.sendMessage("This is a test message.")}>Input a test message</button>
+      />
       <ChatContainer msgs = {
         this.state.messages.filter(msg => msg.room === this.state.currentRoom)
       }
@@ -215,7 +216,7 @@ class App extends Component {
         this.state.users[this.state.currentUser - 201].name
       }
       /> 
-      <InputBar sendMessage={this.sendMessage}/>
+      <InputBar sendMessage={()=>this.sendMessage("This is a test message.")}/>
       </div>
     );
   }
