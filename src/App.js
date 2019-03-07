@@ -191,8 +191,21 @@ class App extends Component {
   sendMessage(input) {
     let date = new Date();
     let currentRoom = this.state.currentRoom;
+    let time;
+    if (date.getHours()==0) {
+      time = "OO:"+date.getMinutes()+"am"
+    }
+    else if (date.getHours()==12) {
+      time = "12:"+date.getMinutes()+"pm"
+    }
+    else if (date.getHours()>12) {
+      time = `${date.getHours()-12}:${date.getMinutes()}pm`
+    }
+    else {
+      time = `${date.getHours()}:${date.getMinutes()}am`
+    };
     let newMessage = {
-      "date": `${date}`,
+      "date": `${date.getFullYear()} ${date.toLocaleString("en-us",{month:"short"})} ${date.getDate()<10 ? "0" : ""}${date.getDate()}, ${time}`,
       "message": this.state.inputValue,
       "room": currentRoom,
       "author": this.state.currentUser,
