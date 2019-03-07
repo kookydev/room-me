@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./HeaderBar.css";
 import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
-import LogoGrid from "./LogoGrid";
+import LogoGrid from "../LogoGrid";
 
 export class HeaderBar extends Component {
   state = {
@@ -32,7 +32,7 @@ export class HeaderBar extends Component {
           <button className="button-null" onClick={this.click}>
             <LogoGrid />
           </button>
-          <h1 className="room-name">Room Name</h1>
+          <h1 className="room-name">{this.props.roomName}</h1>
           <span className="icons-right">
             <SearchLogo />
             <HeadPhonesLogo />
