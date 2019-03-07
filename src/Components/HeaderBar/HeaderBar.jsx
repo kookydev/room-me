@@ -37,7 +37,7 @@ export class HeaderBar extends Component {
           this.state.isActive
             ? "top-bar-notification expand"
             : "top-bar-notification"}>
-         <Notifications />
+         <Notifications avatarUrl={this.props.avatarUrl} authorName={this.props.authorName} />
          </div>
       </div>
     );

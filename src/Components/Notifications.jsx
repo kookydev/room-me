@@ -8,7 +8,7 @@ let Notifications = (props) => {
       <div className="notification-bar">
       <LogoGrid />
       <h1 className="room-name">Room Name</h1>
-      <Avatar />
+      <Avatar avatarUrl={props.avatarUrl} authorName={props.authorName}/>
       </div>
     )
 }
