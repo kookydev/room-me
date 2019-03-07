@@ -6,13 +6,10 @@ import HeaderBar from "./Components/HeaderBar/HeaderBar.jsx";
 import InputBar from "./Components/InputContainer/InputBar";
 import ChatContainer from "./Components/ChatWindow/ChatContainer";
 
-// const data = [];
-
 class App extends Component {
   state = {
-    currentRoom: 101,
-    currentUser: 202,
-    currentUserName: "Cat",
+    currentRoom: 102,
+    currentUser: 201,
     rooms: [{
         key: 101,
         name: "Living-room",
@@ -182,11 +179,22 @@ class App extends Component {
       }
     ]
   };
+  sendMessage(input) {
+    let date = new Date();
+    let newMessage = {
+      "date": `${date}`,
+      "message": input,
+      "room": this.state.currentRoom,
+      "author": this.state.currentUser,
+      "key": this.state.messages.length+301
+    }
+    let newMessageArray = [...this.state.messages,newMessage];
+    this.setState({messages: newMessageArray})
+  };
   render() {
-    return ( <
-      div className = "App" >
-      <
-      HeaderBar roomName = {
+    return ( 
+      <div className = "App" >
+      {/* <HeaderBar roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
       }
       userName = {
@@ -195,20 +203,20 @@ class App extends Component {
       avatarUrl = {
         this.state.users[this.state.currentUser - 201].avatarUrl
       }
-      /> <
-      ChatContainer msgs = {
+      /> */}
+      <button onClick={()=>this.sendMessage("This is a test message.")}>Input a test message</button>
+      <ChatContainer msgs = {
         this.state.messages.filter(msg => msg.room === this.state.currentRoom)
       }
       users = {
         this.state.users
       }
       currentUserName = {
-        this.state.currentUserName
+        this.state.users[this.state.currentUser - 201].name
       }
-      /> <
-      InputBar / >
-      <
-      /div>
+      /> 
+      <InputBar sendMessage={this.sendMessage}/>
+      </div>
     );
   }
 }

@@ -8,7 +8,7 @@ let InputBar = props => {
   return (
     <div className="input-bar">
       <Input />
-      <SubmitButton />
+      <SubmitButton sendMessage={props.sendMessage}/>
       <PlusButton />
     </div>
   );
