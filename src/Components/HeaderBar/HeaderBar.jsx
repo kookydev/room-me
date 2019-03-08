@@ -1,35 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import "./HeaderBar.css";
 import HeadPhonesLogo from "./headPhonesLogo";
 import SearchLogo from "./searchLogo";
 import LogoGrid from "../LogoGrid";
 import Notifications from "../Notifications";
 
-export class HeaderBar extends Component {
-  state = {
-    isActive: false
-  };
-
-  click = () => {
-    this.state.isActive
-      ? this.setState({ isActive: false })
-      : this.setState({ isActive: true });
-  };
-
-  render() {
+let HeaderBar = (props) => {
     return (
       <div
         className={
-          this.state.isActive
+          props.headerBarIsExpanded
             ? "top-bar-container notification-expand"
             : "top-bar-container"
         }
       >
         <div className="top-bar">
-          <button className="button-null" onClick={this.click}>
+          <button className="button-null" onClick={props.expandHeaderBar}>
             <LogoGrid />
           </button>
-          <h1 className="room-name">{this.props.roomName}</h1>
+          <h1 className="room-name">{props.roomName}</h1>
           <span className="icons-right">
             <SearchLogo />
             <HeadPhonesLogo />
@@ -37,24 +26,23 @@ export class HeaderBar extends Component {
         </div>
         <div
           className={
-            this.state.isActive
+            props.headerBarIsExpanded
               ? "top-bar-notification expand"
               : "top-bar-notification"
           }
         >
-          {this.props.notificationData().map(n => (
+          {props.notificationData().map(n => (
             <Notifications
               roomKey={n.roomKey}
               roomName={n.roomName}
               number={n.number}
               avatars={n.avatars}
-              goToRoom={this.props.goToRoom}
+              goToRoom={props.goToRoom}
             />
           ))}
         </div>
       </div>
     );
-  }
 }
 
 export default HeaderBar;
