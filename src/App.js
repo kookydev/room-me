@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import "./App.css";
 import HeaderBar from "./Components/HeaderBar/HeaderBar.jsx";
 import InputBar from "./Components/InputContainer/InputBar";
@@ -11,8 +13,7 @@ class App extends Component {
     currentRoom: 101,
     currentUser: 202,
     currentUserName: "Cat",
-    rooms: [
-      {
+    rooms: [{
         key: 101,
         name: "Living-room",
         users: [201, 202, 203]
@@ -28,40 +29,33 @@ class App extends Component {
         users: []
       }
     ],
-    users: [
-      {
+    users: [{
         key: 201,
         name: "Dog",
-        avatarUrl:
-          "https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg"
+        avatarUrl: "https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg"
       },
       {
         key: 202,
         name: "Cat",
-        avatarUrl:
-          "https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg"
+        avatarUrl: "https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg"
       },
       {
         key: 203,
         name: "Rabbit",
-        avatarUrl:
-          "https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg"
+        avatarUrl: "https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg"
       },
       {
         key: 204,
         name: "Parrot",
-        avatarUrl:
-          "https://farm1.staticflickr.com/621/22243094746_b96fd558a8_b.jpg"
+        avatarUrl: "https://farm1.staticflickr.com/621/22243094746_b96fd558a8_b.jpg"
       },
       {
         key: 205,
         name: "Snake",
-        avatarUrl:
-          "https://farm5.staticflickr.com/4831/31237635227_ae50d4a8d0_b.jpg"
+        avatarUrl: "https://farm5.staticflickr.com/4831/31237635227_ae50d4a8d0_b.jpg"
       }
     ],
-    messages: [
-      {
+    messages: [{
         date: "2019 Mar 01, 7:40pm",
         message: "Woof!",
         room: 101,
@@ -112,8 +106,7 @@ class App extends Component {
       },
       {
         date: "2019 Mar 04, 11:36am",
-        message:
-          "Woof woof. Woof woof. Woof woof woof woof, woof woof woof woof woof woof: woof woof woof woof woof woof woof. Woof woof woof woof woof woof woof woof woof woof (woof woof woof woof woof woof woof woof woof woof woof woof woof woof) woof woof woof woof woof; woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof! Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof.",
+        message: "Woof woof. Woof woof. Woof woof woof woof, woof woof woof woof woof woof: woof woof woof woof woof woof woof. Woof woof woof woof woof woof woof woof woof woof (woof woof woof woof woof woof woof woof woof woof woof woof woof woof) woof woof woof woof woof; woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof! Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof.",
         room: 101,
         author: 201,
         key: 308
@@ -148,8 +141,7 @@ class App extends Component {
       },
       {
         date: "2019 Mar 05, 8:23am",
-        message:
-          "Miaow miaow miaow miaow, miaow miaow miaow miaow miaow. Miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow, miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow.",
+        message: "Miaow miaow miaow miaow, miaow miaow miaow miaow miaow. Miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow, miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow.",
         room: 101,
         author: 202,
         key: 313
@@ -184,8 +176,7 @@ class App extends Component {
       },
       {
         date: "2019 Mar 06, 12:02pm",
-        message:
-          "Miaow miaow miaow miaow miaow miaow miaow miaow! Miaow. Miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow &mdash; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow. Miaow miaow.",
+        message: "Miaow miaow miaow miaow miaow miaow miaow miaow! Miaow. Miaow miaow miaow miaow miaow miaow miaow; miaow miaow miaow miaow miaow miaow miaow miaow &mdash; miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow miaow. Miaow miaow.",
         room: 101,
         author: 202,
         key: 318
@@ -193,22 +184,34 @@ class App extends Component {
     ]
   };
   render() {
-    return (
-      <div className="App">
-        <HeaderBar
-          roomName={this.state.rooms[this.state.currentRoom - 101].name}
-          userName={this.state.users[this.state.currentUser - 201].name}
-          avatarUrl={this.state.users[this.state.currentUser - 201].avatarUrl}
-        />{" "}
-        <ChatContainer
-          msgs={this.state.messages.filter(
-            msg => msg.room === this.state.currentRoom
-          )}
-          users={this.state.users}
-          currentUserName={this.state.currentUserName}
-        />{" "}
-        <InputBar />
-      </div>
+    return ( <
+      div className = "App" >
+      <
+      HeaderBar roomName = {
+        this.state.rooms[this.state.currentRoom - 101].name
+      }
+      userName = {
+        this.state.users[this.state.currentUser - 201].name
+      }
+      avatarUrl = {
+        this.state.users[this.state.currentUser - 201].avatarUrl
+      }
+      /> <
+      ChatContainer msgs = {
+        this.state.messages.filter(
+          msg => msg.room === this.state.currentRoom
+        )
+      }
+      users = {
+        this.state.users
+      }
+      currentUserName = {
+        this.state.currentUserName
+      }
+      /> <
+      InputBar / >
+      <
+      /div>
     );
   }
 }
