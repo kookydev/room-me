@@ -220,7 +220,7 @@ class App extends Component {
     };
     let newMessage = {
       "date": `${date.getFullYear()} ${date.toLocaleString("en-us",{month:"short"})} ${date.getDate()<10 ? "0" : ""}${date.getDate()}, ${time}`,
-      "message": this.state.inputValue,
+      "message": this.state.inputValue === "" ? "*has sent an empty message*" : this.state.inputValue,
       "room": currentRoom,
       "author": this.state.currentUser,
       "key": this.state.messages.length + 301

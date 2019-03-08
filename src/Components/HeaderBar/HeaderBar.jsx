@@ -14,7 +14,6 @@ export class HeaderBar extends Component {
     this.state.isActive
       ? this.setState({ isActive: false })
       : this.setState({ isActive: true });
-    this.props.notificationData();
   };
 
   render() {
