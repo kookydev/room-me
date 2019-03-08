@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import HeaderBar from "./Components/HeaderBar.jsx";
+import HeaderBar from "./Components/HeaderBar/HeaderBar.jsx";
 import InputBar from "./Components/InputContainer/InputBar";
-import ChatContainer from "./Components/ChatContainer";
+import ChatContainer from "./Components/ChatWindow/ChatContainer";
 
 class App extends Component {
   constructor() {
