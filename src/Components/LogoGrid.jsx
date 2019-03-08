@@ -7,7 +7,7 @@ let LogoGrid = props => {
   return (
     <div className="logo-grid">
       <Logo />
-      <NotificationBubble notifications={6} />
+      <NotificationBubble notifications={props.notifications} />
     </div>
   );
 };

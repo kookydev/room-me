@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       currentRoom: 102,
-      currentUser: 201,
+      currentUser: 202,
+      headerBarExpand: false,
       inputValue: "",
       rooms: [{
           key: 101,
@@ -185,10 +186,13 @@ class App extends Component {
           author: 202,
           key: 318,
         }
-      ]
+      ],
+      notificationDataVar: []
     };
     this.inputHandler = this.inputHandler.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
+    this.notificationData = this.notificationData.bind(this);
+    this.goToRoom = this.goToRoom.bind(this);
   }
   inputHandler(event) {
     this.setState({
@@ -227,28 +231,68 @@ class App extends Component {
     })
     this.setState({
       inputValue: ""
-    })
+    });
   };
   messageInput = document.getElementsByClassName("message-bar")[0];
 
-
   notificationData = () => {
-    notifications
     let rooms = this.state.users[this.state.currentUser - 201].inRooms;
-    let notificationRooms = []
-    for (let i = 0; i < this.state.rooms[this.state.currentRoom - 101].users.length(); i++) {
-      let userID = this.state.rooms[this.state.currentRoom - 101].users[i];
-      console.log(userID);
-      // for (let i=0; i<this.state.users[-101].users[].length(); i++)
-      // notificationRooms.push({avatarUrl: this.state.users[userID].avatarUrl, userName: this.state.users[userID].name})
+
+    let notificationDataVar = []
+
+
+    for (let i = 0; i < rooms.length; i++) {
+      let thisRoom = this.state.rooms[rooms[i] - 101]
+      let avatarArray = [];
+      for (let a = 0; a < thisRoom.users.length; a++) {
+        avatarArray.push({
+          avatarUrl: this.state.users[thisRoom.users[a] - 201].avatarUrl,
+          userName: this.state.users[thisRoom.users[a] - 201].name
+        })
+      }
+      notificationDataVar.push({
+        number: this.state.messages.filter(
+          msg => msg.room === thisRoom.key).length,
+        roomKey: thisRoom.key,
+        roomName: thisRoom.name,
+        avatars: avatarArray
+      })
     }
+    console.log(notificationDataVar);
+    return notificationDataVar
   }
+
+  goToRoom(roomKey) {
+    this.setState({
+      "currentRoom": roomKey,
+      "headerBarExpand": false
+    });
+  }
+
+
+
+
+  //   let userID = this.state.rooms[this.state.currentRoom - 101].users[i];
+  //   console.log(userID);
+  //   // for (let i=0; i<this.state.users[-101].users[].length(); i++)
+  //   // notificationRooms.push({avatarUrl: this.state.users[userID].avatarUrl, userName: this.state.users[userID].name})
+  // }
+  // }
 
   render() {
     return ( < div className = "App" >
       <
-      HeaderBar roomName = {
+      HeaderBar headerBarExpand = {
+        this.state.headerBarExpand
+      }
+      goToRoom = {
+        this.goToRoom
+      }
+      roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
+      }
+      notificationData = {
+        this.notificationData
       }
       userName = {
         this.state.users[this.state.currentUser - 201].name
@@ -256,29 +300,27 @@ class App extends Component {
       avatarUrl = {
         this.state.users[this.state.currentUser - 201].avatarUrl
       }
-      /> <
-      ChatContainer msgs = {
-        this.state.messages.filter(msg => msg.room === this.state.currentRoom)
-      }
-      users = {
-        this.state.users
-      }
-      currentUserName = {
-        this.state.users[this.state.currentUser - 201].name
-      }
-      /> <
-      InputBar inputHandler = {
-        this.inputHandler
-      }
-      inputValue = {
-        this.state.inputValue
-      }
-      sendMessage = {
-        this.sendMessage
-      }
-      /> </div >
-    );
+      /> <ChatContainer msgs = {
+      this.state.messages.filter(msg => msg.room === this.state.currentRoom)
+    }
+    users = {
+      this.state.users
+    }
+    currentUserName = {
+      this.state.users[this.state.currentUser - 201].name
+    }
+    /> <InputBar inputHandler = {
+    this.inputHandler
   }
+  inputValue = {
+    this.state.inputValue
+  }
+  sendMessage = {
+    this.sendMessage
+  }
+  /> </div >
+);
+}
 }
 
 export default App;
