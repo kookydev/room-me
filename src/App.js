@@ -32,27 +32,32 @@ class App extends Component {
       users: [{
           key: 201,
           name: "Dog",
-          avatarUrl: "https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg"
+          avatarUrl: "https://farm2.staticflickr.com/1142/1139134023_c497d6b907_z.jpg",
+          inRooms: [101]
         },
         {
           key: 202,
           name: "Cat",
-          avatarUrl: "https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg"
+          avatarUrl: "https://farm5.staticflickr.com/4447/37761450081_abd8bce5f8_k.jpg",
+          inRooms: [101, 102]
         },
         {
           key: 203,
           name: "Rabbit",
-          avatarUrl: "https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg"
+          avatarUrl: "https://farm1.staticflickr.com/929/43986331111_f71f9200c3_k.jpg",
+          inRooms: [101]
         },
         {
           key: 204,
           name: "Parrot",
-          avatarUrl: "https://farm1.staticflickr.com/621/22243094746_b96fd558a8_b.jpg"
+          avatarUrl: "https://farm1.staticflickr.com/621/22243094746_b96fd558a8_b.jpg",
+          inRooms: [102]
         },
         {
           key: 205,
           name: "Snake",
-          avatarUrl: "https://farm5.staticflickr.com/4831/31237635227_ae50d4a8d0_b.jpg"
+          avatarUrl: "https://farm5.staticflickr.com/4831/31237635227_ae50d4a8d0_b.jpg",
+          inRooms: []
         }
       ],
       messages: [{
@@ -186,29 +191,27 @@ class App extends Component {
     this.sendMessage = this.sendMessage.bind(this);
   }
   inputHandler(event) {
-    this.setState({inputValue:event.target.value})
+    this.setState({
+      inputValue: event.target.value
+    })
   };
   sendMessage(input) {
     let date = new Date();
     let currentRoom = this.state.currentRoom;
     let time;
     let minutes;
-    if (date.getMinutes()<10) {
+    if (date.getMinutes() < 10) {
       minutes = `0${date.getMinutes()}`;
-    }
-    else {
+    } else {
       minutes = `${date.getMinutes()}`;
-  }
-    if (date.getHours()===0) {
-      time = "OO:"+minutes+"am"
     }
-    else if (date.getHours()===12) {
-      time = "12:"+minutes+"pm"
-    }
-    else if (date.getHours()>12) {
+    if (date.getHours() === 0) {
+      time = "OO:" + minutes + "am"
+    } else if (date.getHours() === 12) {
+      time = "12:" + minutes + "pm"
+    } else if (date.getHours() > 12) {
       time = `${date.getHours()-12}:${minutes}pm`
-    }
-    else {
+    } else {
       time = `${date.getHours()}:${minutes}am`
     };
     let newMessage = {
@@ -216,17 +219,35 @@ class App extends Component {
       "message": this.state.inputValue,
       "room": currentRoom,
       "author": this.state.currentUser,
-      "key": this.state.messages.length+301
+      "key": this.state.messages.length + 301
     }
-    let newMessageArray = [...this.state.messages,newMessage];
-    this.setState({messages: newMessageArray})
-    this.setState({inputValue:""})
+    let newMessageArray = [...this.state.messages, newMessage];
+    this.setState({
+      messages: newMessageArray
+    })
+    this.setState({
+      inputValue: ""
+    })
   };
   messageInput = document.getElementsByClassName("message-bar")[0];
+
+
+  notificationData = () => {
+    notifications
+    let rooms = this.state.users[this.state.currentUser - 201].inRooms;
+    let notificationRooms = []
+    for (let i = 0; i < this.state.rooms[this.state.currentRoom - 101].users.length(); i++) {
+      let userID = this.state.rooms[this.state.currentRoom - 101].users[i];
+      console.log(userID);
+      // for (let i=0; i<this.state.users[-101].users[].length(); i++)
+      // notificationRooms.push({avatarUrl: this.state.users[userID].avatarUrl, userName: this.state.users[userID].name})
+    }
+  }
+
   render() {
-    return ( 
-      <div className = "App">
-      <HeaderBar roomName = {
+    return ( < div className = "App" >
+      <
+      HeaderBar roomName = {
         this.state.rooms[this.state.currentRoom - 101].name
       }
       userName = {
@@ -235,8 +256,8 @@ class App extends Component {
       avatarUrl = {
         this.state.users[this.state.currentUser - 201].avatarUrl
       }
-      />
-      <ChatContainer msgs = {
+      /> <
+      ChatContainer msgs = {
         this.state.messages.filter(msg => msg.room === this.state.currentRoom)
       }
       users = {
@@ -245,9 +266,17 @@ class App extends Component {
       currentUserName = {
         this.state.users[this.state.currentUser - 201].name
       }
-      /> 
-      <InputBar inputHandler={this.inputHandler} inputValue={this.state.inputValue} sendMessage={this.sendMessage}/>
-      </div>
+      /> <
+      InputBar inputHandler = {
+        this.inputHandler
+      }
+      inputValue = {
+        this.state.inputValue
+      }
+      sendMessage = {
+        this.sendMessage
+      }
+      /> </div >
     );
   }
 }
