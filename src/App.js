@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import HeaderBar from "./Components/HeaderBar/HeaderBar.jsx";
-import InputBar from "./Components/InputContainer/InputBar";
-import ChatContainer from "./Components/ChatWindow/ChatContainer";
+import LoginPage from './Components/Login/LoginPage'
+
 
 class App extends Component {
   constructor() {
@@ -223,28 +222,9 @@ class App extends Component {
   messageInput = document.getElementsByClassName("message-bar")[0];
   render() {
     return ( 
-      <div className = "App">
-      <HeaderBar roomName = {
-        this.state.rooms[this.state.currentRoom - 101].name
-      }
-      userName = {
-        this.state.users[this.state.currentUser - 201].name
-      }
-      avatarUrl = {
-        this.state.users[this.state.currentUser - 201].avatarUrl
-      }
-      />
-      <ChatContainer msgs = {
-        this.state.messages.filter(msg => msg.room === this.state.currentRoom)
-      }
-      users = {
-        this.state.users
-      }
-      currentUserName = {
-        this.state.users[this.state.currentUser - 201].name
-      }
-      /> 
-      <InputBar inputHandler={this.inputHandler} inputValue={this.state.inputValue} sendMessage={this.sendMessage}/>
+      <div className = "login">
+      <LoginPage />
+      
       </div>
     );
   }
