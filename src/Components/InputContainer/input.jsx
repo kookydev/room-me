@@ -1,8 +1,6 @@
-import { render } from "react-dom";
-import "./InputBar.css";
-
 import React, { Component } from "react";
 import autosize from "autosize";
+import "./InputBar.css";
 
 class Input extends Component {
   componentDidMount() {
