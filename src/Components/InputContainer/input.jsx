@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { Component } from "react";
+import autosize from "autosize";
+import "./InputBar.css";
 
-let Input = (props) => {
-    return ( 
-      <div className="message-container"> 
-        <input className="message-bar" type="text" onChange={props.inputHandler} value={props.inputValue}/>
+class Input extends Component {
+  componentDidMount() {
+    this.textarea.focus();
+    autosize(this.textarea);
+  }
+  render() {
+    const style = {
+      resize: "none"
+    };
+    return (
+      <div className="message-container">
+        <textarea
+          style={style}
+          rows={1}
+          data-min-rows={1}
+          className="message-bar"
+          placeholder="Message..."
+          ref={c => (this.textarea = c)}
+          onChange={props.inputHandler}\
+          value={props.inputValue}
+        />
       </div>
-    )
+    );
+  }
 }
 
-export default Input
+export default Input;
