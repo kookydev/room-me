@@ -50,13 +50,14 @@
 
 .top-bar-notification {
     display: flex;
+    flex-direction: column;
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s ease-in-out;
     transition-delay: 400ms;
     background-color: rgba(255, 255, 255, 0.300);
     z-index: 10;
-    height: 4em;
+    height: 9em;
     width: 100%;
     justify-content: space-between;
     box-sizing: border-box;

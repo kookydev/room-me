@@ -1,6 +1,11 @@
 .notification-bar {
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
-    
+}
+
+.notification-avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
 }

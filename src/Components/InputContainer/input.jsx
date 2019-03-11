@@ -20,7 +20,8 @@ class Input extends Component {
           className="message-bar"
           placeholder="Message..."
           ref={c => (this.textarea = c)}
-          defaultValue=""
+          onChange={props.inputHandler}\
+          value={props.inputValue}
         />
       </div>
     );

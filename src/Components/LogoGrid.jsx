@@ -1,13 +1,13 @@
 import React from "react";
 import Logo from "./Logo";
 import NotificationBubble from "./NotificationBubble";
-import "./Logo.css";
+import "./logo.css";
 
 let LogoGrid = props => {
   return (
     <div className="logo-grid">
       <Logo />
-      <NotificationBubble notifications={6} />
+      <NotificationBubble notifications={props.notifications} />
     </div>
   );
 };

@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "autosize": "^4.0.2",
-    "react": "^16.8.3",
+    "react": "^16.8.4",
     "react-collapsible": "^2.6.0",
-    "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-dom": "^16.8.4",
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
