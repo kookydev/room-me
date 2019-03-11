@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       currentRoom: 102,
       currentUser: 202,
-      headerBarExpand: false,
+      headerBarIsExpanded: false,
       inputValue: "",
       rooms: [{
           key: 101,
@@ -191,6 +191,7 @@ class App extends Component {
     };
     this.inputHandler = this.inputHandler.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
+    this.expandHeaderBar = this.expandHeaderBar.bind(this);
     this.notificationData = this.notificationData.bind(this);
     this.goToRoom = this.goToRoom.bind(this);
   }
@@ -262,11 +263,17 @@ class App extends Component {
     return notificationDataVar
   }
 
+  expandHeaderBar = () => {
+    this.state.headerBarIsExpanded
+      ? this.setState({headerBarIsExpanded: false })
+      : this.setState({headerBarIsExpanded: true });
+  };
+
   goToRoom(roomKey) {
     this.setState({
-      "currentRoom": roomKey,
-      "headerBarExpand": false
+      "currentRoom": roomKey
     });
+    this.expandHeaderBar();
   }
 
 
@@ -282,9 +289,10 @@ class App extends Component {
   render() {
     return ( < div className = "App" >
       <
-      HeaderBar headerBarExpand = {
-        this.state.headerBarExpand
+      HeaderBar headerBarIsExpanded = {
+        this.state.headerBarIsExpanded
       }
+      expandHeaderBar={this.expandHeaderBar}
       goToRoom = {
         this.goToRoom
       }
