@@ -4,6 +4,7 @@
     justify-content: space-between;
     height: 3em;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .top-bar-container {
@@ -13,11 +14,12 @@
     height: 3em;
     width: 100vw;
     transition: height .5s ease-in-out;
-
+    box-sizing: border-box;
 }
 
 .top-bar h1 {
     font-size: 1.8em;
+
 }
 
 .room-name {
@@ -57,7 +59,8 @@
     z-index: 10;
     height: 9em;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    box-sizing: border-box;
 
 
 }
